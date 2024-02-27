@@ -19,4 +19,6 @@ Console.WriteLine(TreeIncludes.IncludesWithRecursion(one, 5)); // True
 Console.WriteLine(TreeIncludes.IncludesWithIterationAndQueue(one, 5)); // True
 Console.WriteLine(TreeIncludes.IncludesWithIterationAndStack(one, 5)); // True
 
-Console.WriteLine(TreeSum.Sum(one)); // 21
+Console.WriteLine(TreeSum.SumWithRecursion(one)); // 21
+Console.WriteLine(TreeSum.SumWithIterationAndQueue(one)); // 21
+Console.WriteLine(TreeSum.SumWithIterationAndStack(one)); // 21
