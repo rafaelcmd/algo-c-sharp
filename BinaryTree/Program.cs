@@ -1,5 +1,6 @@
 ﻿using BinaryTree.Tree;
 using BinaryTree.TreeIncludes;
+using BinaryTree.TreeMinValue;
 using BinaryTree.TreeSum;
 
 /*
@@ -41,8 +42,6 @@ using BinaryTree.TreeSum;
     15. General Tree: A tree data structure in which each node can have an arbitrary number of children, allowing for flexible and complex hierarchical structures.
     16. M-ary Tree: A tree data structure in which each node can have at most m children, where m is a fixed natural number greater than 1.
     17. Ternary Tree: A tree data structure in which each node has at most three children, typically referred to as the left child, middle child, and right child.
-    18. K-ary Tree: A tree data structure in which each node can have at most k children, where k is a fixed natural number greater than 1.
-    19. N-ary Tree: A tree data structure in which each node can have an arbitrary number of children, allowing for flexible and complex hierarchical structures.
     20. Perfect Binary Tree: A binary tree in which all interior nodes have two children and all leaves have the same depth or same level.
     21. Complete Binary Tree: A binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
     22. Full Binary Tree: A binary tree in which every node other than the leaves has two children.
@@ -70,3 +69,7 @@ Console.WriteLine(TreeIncludes.IncludesWithIterationAndStack(one, 5)); // True
 Console.WriteLine(TreeSum.SumWithRecursion(one)); // 21
 Console.WriteLine(TreeSum.SumWithIterationAndQueue(one)); // 21
 Console.WriteLine(TreeSum.SumWithIterationAndStack(one)); // 21
+
+Console.WriteLine(TreeMinValue.MinValueWithRecursion(one)); // 1
+Console.WriteLine(TreeMinValue.MinValueWithIterationAndQueue(one)); // 1
+Console.WriteLine(TreeMinValue.MinValueWithIterationAndStack(one)); // 1
