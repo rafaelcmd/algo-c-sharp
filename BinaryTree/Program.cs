@@ -1,4 +1,5 @@
-﻿using BinaryTree.Tree;
+﻿using BinaryTree.MaxRootToLeafPathSum;
+using BinaryTree.Tree;
 using BinaryTree.TreeIncludes;
 using BinaryTree.TreeMinValue;
 using BinaryTree.TreeSum;
@@ -25,28 +26,22 @@ using BinaryTree.TreeSum;
    
    Types of trees:
    
-    1. Binary Tree: A tree in which each node has at most two children, typically referred to as the left child and the right child.
-    2. Binary Search Tree (BST): A binary tree in which the left child of a node contains only values less than the node's value, and the right child contains only values greater than the node's value.
-    3. AVL Tree: A self-balancing binary search tree in which the heights of the two child subtrees of any node differ by at most one.
-    4. Red-Black Tree: A self-balancing binary search tree with a property that the height of the tree is O(log n), where n is the number of nodes in the tree.
-    5. B-Tree: A self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time.
-    6. Trie: A tree data structure used to store a dynamic set of strings, where the keys are usually strings.
-    7. Segment Tree: A tree data structure used to store information about intervals or segments, allowing for efficient queries and updates on the intervals.
-    8. Fenwick Tree (Binary Indexed Tree): A tree data structure used to efficiently perform range queries and updates on an array of numbers.
-    9. Suffix Tree: A tree data structure used to store all the suffixes of a given text, allowing for efficient substring searches and other string-related operations.
-    10. Expression Tree: A tree data structure used to represent mathematical expressions, allowing for efficient evaluation and manipulation of the expressions.
-    11. Heap: A specialized tree-based data structure that satisfies the heap property, which is used to implement priority queues and heapsort.
-    12. Balanced Tree: A tree data structure in which the heights of the two child subtrees of any node differ by at most one, ensuring that the tree remains balanced and efficient.
-    13. Unbalanced Tree: A tree data structure in which the heights of the two child subtrees of a node can differ significantly, leading to inefficient operations and performance.
-    14. Multiway Tree: A tree data structure in which a node can have more than two children, allowing for more flexible and complex hierarchical structures.
-    15. General Tree: A tree data structure in which each node can have an arbitrary number of children, allowing for flexible and complex hierarchical structures.
-    16. M-ary Tree: A tree data structure in which each node can have at most m children, where m is a fixed natural number greater than 1.
-    17. Ternary Tree: A tree data structure in which each node has at most three children, typically referred to as the left child, middle child, and right child.
-    20. Perfect Binary Tree: A binary tree in which all interior nodes have two children and all leaves have the same depth or same level.
-    21. Complete Binary Tree: A binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
-    22. Full Binary Tree: A binary tree in which every node other than the leaves has two children.
-    23. Degenerate Tree: A tree in which each parent node has only one associated child node, leading to a linear data structure similar to a linked list.
-    24. Threaded Binary Tree: A binary tree in which every node has a thread (or pointer) to its in-order successor and predecessor, allowing for efficient in-order traversal.
+    1. Trees vs Binary Trees:
+        A tree is a data structure that simulates a hierarchical tree structure with a root value and subtrees of children, represented as a set of linked nodes.
+        A binary tree is a tree in which each node has at most two children, typically referred to as the left child and the right child.
+        
+    2. Binary Trees vs Binary Search Trees:
+        A binary search tree (BST) is a binary tree in which the left child of a node contains only values less than the node's value,
+        and the right child contains only values greater than the node's value.
+        
+    3. Balanced vs Unbalanced Trees:
+        A balanced tree is a tree in which the height of the left and right subtrees of every node differs by at most one.
+        An unbalanced tree is a tree in which the height of the left and right subtrees of a node can differ significantly.
+        
+    4. Complete vs Full vs Perfect Binary Trees:
+        A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
+        A full binary tree is a binary tree in which every node has either zero or two children.
+        A perfect binary tree is a binary tree in which all interior nodes have two children and all leaves have the same depth or same level.
 */
 
 var one = new Node(1);
@@ -62,6 +57,16 @@ two.Left = four;
 two.Right = five;
 three.Right = six;
 
+/*
+    Tree:
+    
+        1
+       / \
+      2   3
+     / \   \
+    4   5   6
+*/
+
 Console.WriteLine(TreeIncludes.IncludesWithRecursion(one, 5)); // True
 Console.WriteLine(TreeIncludes.IncludesWithIterationAndQueue(one, 5)); // True
 Console.WriteLine(TreeIncludes.IncludesWithIterationAndStack(one, 5)); // True
@@ -73,3 +78,6 @@ Console.WriteLine(TreeSum.SumWithIterationAndStack(one)); // 21
 Console.WriteLine(TreeMinValue.MinValueWithRecursion(one)); // 1
 Console.WriteLine(TreeMinValue.MinValueWithIterationAndQueue(one)); // 1
 Console.WriteLine(TreeMinValue.MinValueWithIterationAndStack(one)); // 1
+
+Console.WriteLine(MaxRootToLeafPathSum.MaxRootToLeafPathSumWithRecursion(one));
+Console.WriteLine(MaxRootToLeafPathSum.MaxRootToLeafPathSumWithIterationAndStack(one));
